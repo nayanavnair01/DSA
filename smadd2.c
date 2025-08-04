@@ -107,18 +107,7 @@ printf("\nSparse Matrix 1 (row column value):\n");
     }
 
     
-    for(i = 0; i < k - 1; i++) {
-        for(j = i + 1; j < k; j++) {
-            if(trans[0][i] > trans[0][j] ||
-               (trans[0][i] == trans[0][j] && trans[1][i] > trans[1][j])) {
-                
-                int temp;
-                temp = trans[0][i]; trans[0][i] = trans[0][j]; trans[0][j] = temp;
-                temp = trans[1][i]; trans[1][i] = trans[1][j]; trans[1][j] = temp;
-                temp = trans[2][i]; trans[2][i] = trans[2][j]; trans[2][j] = temp;
-            }
-        }
-    }
+    
 
     printf("\nTranspose of Sum :\n");
     for(i = 0; i < k; i++)
